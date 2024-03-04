@@ -58,6 +58,27 @@ public class Polynomial {
         }
         tail = newTermNode;
     }
+    public Polynomial multiply(Polynomial polynomial) {
+        Polynomial result = new Polynomial();
+
+        TermNode current1 = this.getHead();
+        while (current1 != null) {
+            TermNode current2 = polynomial.getHead();
+            while (current2 != null) {
+                int coefficient = current1.getData().getCoefficient() * current2.getData().getCoefficient();
+                int degree = current1.getData().getDegree() + current2.getData().getDegree();
+
+                TermNode termNode = new TermNode(new Term(coefficient, degree));
+                result.insertLast(termNode);
+
+                current2 = current2.getNext();
+            }
+
+            current1 = current1.getNext();
+        }
+
+        return result;
+    }
 
     public String toString(){
         StringBuilder result = new StringBuilder();
@@ -67,5 +88,21 @@ public class Polynomial {
             tmp = tmp.getNext();
         }
         return result.toString();
+    }
+
+    public TermNode getHead() {
+        return head;
+    }
+
+    public void setHead(TermNode head) {
+        this.head = head;
+    }
+
+    public TermNode getTail() {
+        return tail;
+    }
+
+    public void setTail(TermNode tail) {
+        this.tail = tail;
     }
 }

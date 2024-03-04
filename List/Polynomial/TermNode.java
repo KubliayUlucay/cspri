@@ -26,12 +26,19 @@ public class TermNode {
     }
 
     public String toString() {
-        if (data.degree != 1 && data.degree != 0) {
-            return "" + data.coefficient + "x" + data.degree;
-        } else if (data.degree == 1) {
-            return "" + data.coefficient + "x";
-        } else {
-            return "" + data.coefficient;
+        StringBuilder result = new StringBuilder();
+        if (data.getCoefficient() != 0) {
+            result.append(data.getCoefficient());
+            if (data.getExponentX() > 0) {
+                result.append("x").append(data.getExponentX());
+            }
+            if (data.getExponentY() > 0) {
+                result.append("y").append(data.getExponentY());
+            }
+            if (data.getExponentZ() > 0) {
+                result.append("z").append(data.getExponentZ());
+            }
         }
+        return result.toString();
     }
 }
