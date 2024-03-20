@@ -28,3 +28,36 @@ int algorithm2(int N){
 			sum++;
 	return sum;
 }
+
+4.
+write method
+LinkedList popBottomK(int k)
+pops k elements from the bottom and return them as a singly linkedlist. you are not allowed to use any stack methods and any external stacks. you are allowed to use attributes, constructors, getters and setters. Write method for linkedlist implementation
+
+3. write a method which removes onyl the even indexed elements from the stack. The first element at bottom has index 1. you are onl allowed to use pop, push, isempty functions (hint: use external stack) you are not allowed to use any stack attributes such as N, top array etc.
+void removeEvenIndexed()
+
+2.
+write method
+boolean isPalindrom()
+-which returnstrue if the doubly linked list is palindrom. Implement the following algorithm:
+at the beginning of the algo. we have two pointers p1 and p2 which shows the beginning and the end of the list respectively
+- compare the cıbtebts ıf the oışbtersi şf they are dşfferebt return false otherwise advance the pointers p1 to next p2 to previous
+- the algo finishes either p1=p2 or p1.next = p2 in which case the method returns true
+you are not allowed to use any doubly linkedlist methods. you are allowed to use attributes constructors getters and setters
+
+1.
+write method
+linkedlist intersec(linkedlist1, linkedlist2)
+to find the intersection of the elements in two sorted linkedlist and return a new linkedlist. implement the following algo
+1.at the beginning of algo, let say we have two nodes p1 and p2, showing the head nodes of the first and second list respectively
+2.compare the contents of the nodes p1 and p2
+- if p1.data < p2.data advance p1 pointer to show next node in its list
+- if p1.data > p2.data advance p2 pointer to show next node in its list
+- if p1.data = p2.data put a new node with content of p1 and advance both pointers p1 and p2 in their respecive lists.
+3. continue with step 2 until one of the p1 or p2 is null
+you are not allowed to use any linkedlist methods, you are only allowed to use attributes constructors getter and setters
+content of first list 1 3 5 7 11 12 second list 1 2 6 7 9 11 result 1 7 11
+
+
+
