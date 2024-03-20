@@ -22,7 +22,7 @@ public class Term {
         this.exponentX = exponentX;
         this.exponentY = exponentY;
         this.exponentZ = exponentZ;
-        this.degree = 0; // Assuming that terms with exponents don't have a degree
+        //this.degree = 0; // Assuming that terms with exponents don't have a degree
     }
 
     public int getCoefficient() {
